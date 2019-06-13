@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SSBaseComponents"
-  s.version      = "1.0.0"
+  s.version      = "0.0.1"
   s.summary      = "基础组件"
 
   # This description is used to generate tags and improve search results.
@@ -66,6 +66,8 @@ Pod::Spec.new do |s|
 
   # s.platform     = :ios
   s.platform     = :ios, "9.0"
+  # inhibit_all_warnings!
+  # use_frameworks!
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -89,14 +91,14 @@ Pod::Spec.new do |s|
   #  giving a folder will include any swift, h, m, mm, c & cpp files.
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
-  #
+  # , "SSBaseComponents/*.h"  "Category/**/*.{h,m}"
 
-  s.source_files  = "SSBaseComponents/Category/*.{h,m}"
+  s.source_files  = ["Category/**/*.{h,m}", "*.h"]
 #  s.source_files  = "Classes", "Classes/**/*.{h,m}"
 #  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
-  s.public_header_files = "SSBaseComponents/*.h"
+  #s.public_header_files = []
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -121,7 +123,7 @@ Pod::Spec.new do |s|
 
 
   # s.framework  = "SomeFramework"
-  s.framework  = "UIKit"
+  s.framework  = "UIKit","MJRefresh"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
