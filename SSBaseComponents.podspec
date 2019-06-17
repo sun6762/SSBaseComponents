@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SSBaseComponents"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "基础组件"
 
   # This description is used to generate tags and improve search results.
@@ -123,7 +123,7 @@ Pod::Spec.new do |s|
 
 
   # s.framework  = "SomeFramework"
-  s.framework  = "UIKit","MJRefresh"
+  s.framework  = "UIKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
@@ -139,6 +139,7 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  # s.dependency "JSONKit", "~> 1.4" ,"MJRefresh"
+  s.dependency = ["MJRefresh"]
 
 end
